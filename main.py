@@ -15,6 +15,7 @@ from flask_gravatar import Gravatar
 app = Flask(__name__)
 app.app_context().push()
 app.config['SECRET_KEY'] = secrets.token_hex(32)
+app.config['WTF_CSRF_ENABLED'] = False
 ckeditor = CKEditor(app)
 Bootstrap(app)
 login_manager = LoginManager()
